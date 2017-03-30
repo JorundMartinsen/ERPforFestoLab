@@ -1,0 +1,62 @@
+﻿<Window x:Name="New_Order"
+        x:Class="ERP_system.NewOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ERP_system"
+        mc:Ignorable="d"
+        Title="Ny bestilling"
+        WindowStartupLocation="CenterOwner"
+        Topmost="True"
+        ShowInTaskbar="False"
+        ResizeMode="CanResize"
+        WindowStyle="ToolWindow"
+        SizeToContent="WidthAndHeight">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="label"
+               Grid.Row="0"
+               Grid.Column="0"
+               Content="Velg kunde"
+               HorizontalAlignment="Left"
+               Margin="2"
+               VerticalAlignment="Top" />
+        <ComboBox x:Name="comboBox"
+                  Grid.Row="0"
+                  Grid.Column="1"
+                  DisplayMemberPath="Name"
+                  SelectedValuePath="CustomerId"
+                  HorizontalAlignment="Left"
+                  Margin="2"
+                  VerticalAlignment="Top"
+                  Width="120" />
+        <StackPanel Orientation="Horizontal"
+                    Grid.Row="1"
+                    Grid.Column="1">
+            <Button x:Name="okBtn"
+                    Content="OK"
+                    Height="Auto"
+                    Width="57"
+                    HorizontalAlignment="Left"
+                    Margin="2"
+                    VerticalAlignment="Top"
+                    Click="okBtn_Click" />
+            <Button x:Name="CancelBtn"
+                    Content="Cancel"
+                    Height="Auto"
+                    Width="57"
+                    HorizontalAlignment="Right"
+                    Margin="2"
+                    VerticalAlignment="Top"
+                    Click="CancelBtn_Click" />
+        </StackPanel>
+    </Grid>
+</Window>

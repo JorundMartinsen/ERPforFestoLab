@@ -1,0 +1,81 @@
+﻿    <Window x:Class="ERP_system.DatabaseSettings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ERP_system"
+        mc:Ignorable="d"
+        Title="Databaseinnstillinger"
+        Height="140"
+        Width="300"
+        ResizeMode="NoResize"
+        Loaded="Window_Loaded">
+    <Grid
+        Margin="2">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25*" />
+            <RowDefinition Height="25*" />
+            <RowDefinition Height="25*" />
+            <RowDefinition Height="25*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="38*" />
+            <ColumnDefinition Width="62*" />
+        </Grid.ColumnDefinitions>
+        <Label x:Name="iplbl"
+               Grid.Row="0"
+               Grid.Column="0"
+               Content="Server"
+               HorizontalAlignment="Stretch"
+               VerticalAlignment="Center" />
+        <TextBox x:Name="iptxt"
+                 Grid.Row="0"
+                 Grid.Column="1"
+                 Margin="2"
+                 TextWrapping="Wrap"
+                 TextChanged="TextChanged"/>
+        <Label x:Name="uNamelbl"
+               Grid.Row="1"
+               Grid.Column="0"
+               Content="Brukernavn"
+               HorizontalAlignment="Stretch"
+               VerticalAlignment="Center" />
+        <TextBox x:Name="uNametxt"
+                 Grid.Row="1"
+                 Grid.Column="1"
+                 Margin="2"
+                 TextWrapping="Wrap"
+                 TextChanged="TextChanged" />
+        <Label x:Name="passwordlbl"
+               Grid.Row="2"
+               Grid.Column="0"
+               Content="Passord"
+               HorizontalAlignment="Stretch"
+               VerticalAlignment="Center" />
+        <PasswordBox x:Name="Passwordtxt"
+                 Grid.Row="2"
+                 Grid.Column="1"
+                 Margin="2"/>
+        <Grid Grid.Row="3"
+              Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50*" />
+                <ColumnDefinition Width="50*" />
+            </Grid.ColumnDefinitions>
+            <Button x:Name="Cancel"
+                    Grid.Column="0"
+                    Margin="2"
+                    Content="Cancel"
+                    HorizontalAlignment="Stretch"
+                    Click="Cancel_Click" />
+            <Button x:Name="testOk"
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Margin="2"
+                    Content="Test"
+                    HorizontalAlignment="Stretch"
+                    IsDefault="True"
+                    Click="testOk_Click" />
+        </Grid>
+    </Grid>
+</Window>
